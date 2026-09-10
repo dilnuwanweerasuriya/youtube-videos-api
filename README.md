@@ -1,4 +1,4 @@
-# youtube-videos-api
+# youtube-videos-api-v2
 
 Lightweight Node.js wrapper around the [YouTube Data API v3](https://developers.google.com/youtube/v3) for three common needs:
 
@@ -20,20 +20,20 @@ No dependencies — uses Node's built-in `fetch` (Node 18+).
 ## Usage
 
 ```js
-import { YOUTUBEVIDEOSAPIV2 } from 'youtube-videos-api';
+import { YOUTUBEVIDEOSAPIV2 } from 'youtube-videos-api-v2';
 
 const yt = new YOUTUBEVIDEOSAPIV2({ apiKey: process.env.YOUTUBE_API_KEY });
 
 // 1. Live videos
-const { items: liveVideos } = await yt.getLiveVideos(process.env.YOUUBE_CHANNEL_ID);
+const { items: liveVideos } = await yt.getLiveVideos(process.env.CHANNEL_ID);
 
 // 2. All videos on a channel (single page)
-const { items: videos, nextPageToken } = await yt.getAllVideos(process.env.YOUUBE_CHANNEL_ID, {
+const { items: videos, nextPageToken } = await yt.getAllVideos(process.env.CHANNEL_ID, {
   maxResults: 50,
 });
 
 // ...or pull every video the channel has (auto-paginates)
-const { items: everyVideo } = await yt.getAllVideos(process.env.YOUUBE_CHANNEL_ID, {
+const { items: everyVideo } = await yt.getAllVideos(process.env.CHANNEL_ID, {
   fetchAll: true,
 });
 
@@ -116,7 +116,7 @@ You don't have to publish to npm to reuse it elsewhere:
 All methods throw `YouTubeApiError` (exported from the package) on API errors, with `.status` and `.body` for details:
 
 ```js
-import { YouTubeApiError } from 'youtube-videos-api';
+import { YouTubeApiError } from 'youtube-videos-api-v2';
 
 try {
   await yt.getLiveVideos('bad-channel-id');
