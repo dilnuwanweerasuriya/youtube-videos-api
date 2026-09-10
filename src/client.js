@@ -15,7 +15,7 @@ export class YouTubeApiError extends Error {
  */
 export async function request(apiKey, endpoint, params = {}) {
   if (!apiKey) {
-    throw new Error('YouTube API key is required. Pass it as { apiKey } when constructing YouTubeVideosAPI.');
+    throw new Error('YouTube API key is required. Pass it as { apiKey } when constructing YOUTUBEVIDEOSAPIV2.');
   }
 
   const url = new URL(`${BASE_URL}/${endpoint}`);

@@ -1,6 +1,6 @@
 import { request, paginateAll, YouTubeApiError } from './client.js';
 
-export class YouTubeVideosAPI {
+export class YOUTUBEVIDEOSAPIV2 {
   /**
    * @param {Object} config
    * @param {string} config.apiKey - YouTube Data API v3 key.

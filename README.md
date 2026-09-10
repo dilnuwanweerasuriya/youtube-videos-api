@@ -20,9 +20,9 @@ No dependencies — uses Node's built-in `fetch` (Node 18+).
 ## Usage
 
 ```js
-import { YouTubeVideosAPI } from 'youtube-videos-api';
+import { YOUTUBEVIDEOSAPIV2 } from 'youtube-videos-api';
 
-const yt = new YouTubeVideosAPI({ apiKey: process.env.YOUTUBE_API_KEY });
+const yt = new YOUTUBEVIDEOSAPIV2({ apiKey: process.env.YOUTUBE_API_KEY });
 
 // 1. Live videos
 const { items: liveVideos } = await yt.getLiveVideos(process.env.YOUUBE_CHANNEL_ID);
@@ -54,7 +54,7 @@ npm run example
 
 ## API
 
-### `new YouTubeVideosAPI({ apiKey })`
+### `new YOUTUBEVIDEOSAPIV2({ apiKey })`
 
 ### `getLiveVideos(channelId, options?)`
 | option | default | notes |
