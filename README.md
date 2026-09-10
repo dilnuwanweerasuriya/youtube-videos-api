@@ -25,15 +25,15 @@ import { YouTubeVideosAPI } from 'youtube-videos-api';
 const yt = new YouTubeVideosAPI({ apiKey: process.env.YOUTUBE_API_KEY });
 
 // 1. Live videos
-const { items: liveVideos } = await yt.getLiveVideos('UC_x5XG1OV2P6uZZ5FSM9Ttw');
+const { items: liveVideos } = await yt.getLiveVideos(process.env.YOUUBE_CHANNEL_ID);
 
 // 2. All videos on a channel (single page)
-const { items: videos, nextPageToken } = await yt.getAllVideos('UC_x5XG1OV2P6uZZ5FSM9Ttw', {
+const { items: videos, nextPageToken } = await yt.getAllVideos(process.env.YOUUBE_CHANNEL_ID, {
   maxResults: 50,
 });
 
 // ...or pull every video the channel has (auto-paginates)
-const { items: everyVideo } = await yt.getAllVideos('UC_x5XG1OV2P6uZZ5FSM9Ttw', {
+const { items: everyVideo } = await yt.getAllVideos(process.env.YOUUBE_CHANNEL_ID, {
   fetchAll: true,
 });
 
@@ -47,7 +47,9 @@ const { items: results } = await yt.searchVideos('lofi beats', {
 Run the bundled example:
 
 ```bash
-YOUTUBE_API_KEY=xxx CHANNEL_ID=UCxxxx npm run example
+YOUTUBE_API_KEY=xxx 
+CHANNEL_ID=UCxxxx 
+npm run example
 ```
 
 ## API
