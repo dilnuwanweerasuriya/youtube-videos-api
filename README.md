@@ -13,7 +13,7 @@ No dependencies — uses Node's built-in `fetch` (Node 18+).
 1. Get a YouTube Data API v3 key from the [Google Cloud Console](https://console.cloud.google.com/apis/library/youtube.googleapis.com).
 2. Install:
    ```bash
-   npm install
+   npm install youtube-videos-api-v2
    ```
    (or just copy the `src/` folder into your project.)
 
