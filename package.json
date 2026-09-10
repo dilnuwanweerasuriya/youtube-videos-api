@@ -1,0 +1,30 @@
+{
+  "name": "youtube-videos-api",
+  "version": "1.0.0",
+  "description": "Lightweight Node.js wrapper around the YouTube Data API v3 for fetching live videos, all channel videos, and query-based search results.",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "example": "node examples/basic.js"
+  },
+  "keywords": [
+    "youtube",
+    "youtube-api",
+    "youtube-data-api",
+    "youtube-videos-api",
+    "live-videos",
+    "search"
+  ],
+  "license": "MIT",
+  "dependencies": {}
+}
