@@ -1,6 +1,6 @@
 {
   "name": "youtube-videos-api-v2",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "Lightweight Node.js wrapper around the YouTube Data API v3 for fetching live videos, all channel videos, and query-based search results.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
