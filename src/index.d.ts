@@ -49,12 +49,12 @@ export interface SearchVideoOptions extends VideoListOptions {
   order?: SearchOrder;
 }
 
-export interface YOUTUBEVIDEOSAPIV2Config {
+export interface YouTubeVideosApiV2Config {
   apiKey?: string;
 }
 
-export class YOUTUBEVIDEOSAPIV2 {
-  constructor(config?: YOUTUBEVIDEOSAPIV2Config);
+export class YouTubeVideosApiV2 {
+  constructor(config?: YouTubeVideosApiV2Config);
   getLiveVideos(channelId: string, options?: LiveVideoOptions): Promise<VideoResult>;
   getAllVideos(channelId: string, options?: VideoListOptions): Promise<VideoResult>;
   searchVideos(query: string, options?: SearchVideoOptions): Promise<VideoResult>;
